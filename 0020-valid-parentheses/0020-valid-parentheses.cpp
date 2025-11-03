@@ -4,10 +4,10 @@ public:
         stack<char>st;
         for(int i=0;i<s.size();i++)
         {
-            char ch = s[i];
-            if(ch=='(' || ch== '[' || ch=='{')
+            // char ch = s[i];
+            if(s[i]=='(' || s[i]== '[' || s[i]=='{')
             {
-                st.push(ch);
+                st.push(s[i]);
             }
             else
             {
@@ -17,7 +17,7 @@ public:
                 }
 
                 int top = st.top();
-                if((top=='(' && ch==')') || (top=='{' && ch=='}') || (top=='[' && ch==']'))
+                if((top=='(' && s[i]==')') || (top=='{' && s[i]=='}') || (top=='[' && s[i]==']'))
                 {
                     st.pop();
                 }
