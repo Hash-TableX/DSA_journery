@@ -2,7 +2,7 @@ class Solution {
 public:
     string removeDuplicates(string s) {
         int n = s.size();
-        stack<char>st;
+        stack<int>st;
         string res;
 
         for(int i=0;i<n;i++){
@@ -16,9 +16,8 @@ public:
             }
             st.push(s[i]);
         }
-
         while(!st.empty()){
-            res.push_back(st.top());
+            res+=st.top();
             st.pop();
         }
         reverse(res.begin(),res.end());
