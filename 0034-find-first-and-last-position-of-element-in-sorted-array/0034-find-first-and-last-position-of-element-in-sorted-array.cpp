@@ -9,8 +9,7 @@ public:
         int last=-1;
 
         while(low<=high){
-            mid=(low+high)/2;
-
+            mid=low+(high-low)/2;
             if(nums[mid]==target){
                 first=mid;
                 high=mid-1;
@@ -26,7 +25,7 @@ public:
         high=n-1;
 
         while(low<=high){
-            mid = (low+high)/2;
+            mid=low+(high-low)/2;
             if(nums[mid]==target){
                 last=mid;
                 low=mid+1;
@@ -37,7 +36,7 @@ public:
             else{
                 high=mid-1;
             }
-        } 
-        return{first, last};
+        }
+        return {first,last};
     }
 };
