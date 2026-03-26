@@ -4,7 +4,7 @@ public:
         int n = nums.size();
 
         int i=0;
-        for(int j=0;j<n;j++){
+        for(int j=1;j<n;j++){
             if(nums[j]!=0){
                 swap(nums[i],nums[j]);
                 i++;
